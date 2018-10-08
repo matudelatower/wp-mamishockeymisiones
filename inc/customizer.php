@@ -1104,6 +1104,22 @@ function mamihockyemisiones_extra_customize_register( $wp_customize ) {
 			'settings' => 'seccion_contacto_imagen_fondo',
 		) ) );
 
+	$wp_customize->add_setting(
+		'seccion_contacto_formulario',
+		array(
+			'default'           => '',
+			'sanitize_callback' => '',
+		)
+	);
+	$wp_customize->add_control(
+		'seccion_contacto_formulario',
+		array(
+			'label'   => __( 'Formulario - shortcode', 'mamihockyemisiones' ),
+			'section' => 'mamihockyemisiones_seccion_contacto',
+			'type'    => 'text',
+		)
+	);
+
 	$wp_customize->add_panel( 'mamihockeymisiones_contact_panel',
 		array(
 			'priority'   => 690,

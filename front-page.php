@@ -838,10 +838,7 @@ if ( ! $seccion_contacto_imagen_fondo ) {
 
                     <div class="row">
                         <div class="col-md-12">
-							<?php
-							// echo do_shortcode( '[pirate_forms]' )
-							echo do_shortcode( '[contact-form-7 id="409" title="Formulario Contacto Mamis"]' )
-							?>
+	                        <?php echo do_shortcode( get_theme_mod( 'seccion_contacto_formulario' ) ); ?>
                         </div>
                     </div>
                 </div>
