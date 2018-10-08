@@ -26,6 +26,7 @@
 				<?php } else { ?>
                     <section class="jumbotron jumboarticle"
                              style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/cesped.jpg');
+                                     background-size: cover;
                                      background-repeat: no-repeat;
                                      background-position: center;">
 
