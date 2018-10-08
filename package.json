@@ -1,0 +1,33 @@
+{
+  "name": "mamishockeymisiones",
+  "version": "1.0.0",
+  "description": "Bootstrap 4 Mamis Hockey Misiones",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "./node_modules/.bin/webpack --env=\"development\" -w",
+    "dev": "./node_modules/.bin/webpack --env=\"development\"",
+    "prod": "./node_modules/.bin/webpack --env=\"production\""
+  },
+  "author": "matias.delatorre89@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matudelatower/mamishockeymisiones.git"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^3.12.0"
+  }
+}

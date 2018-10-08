@@ -1,0 +1,79 @@
+/*
+Theme Name: Mamis Hockey Misiones
+Theme URI: https://github.com/matudelatower
+Description: Bootstrap 4 Mamis Hockey Misiones
+Author: Matias Solis de la torre
+Author URI: https://github.com/matudelatower/
+Version: 1.0.0
+
+*/
+
+
+.barra {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #95BF37;
+}
+
+.barra h2, .barra h3 {
+    color: #fff;
+}
+
+.img-wrapper{
+    /*max-height: 147px;*/
+    max-height: 19rem;
+    overflow: hidden;
+}
+
+section {
+    margin-bottom: 1rem;
+}
+
+#galeria{
+    max-height: 30rem;
+}
+
+.jumboarticle {
+    min-height: 450px;
+}
+
+.jumbotron {
+    margin-bottom: 0 !important;
+}
+
+.jumbotron-img {
+    -webkit-background-size: 100% auto !important;
+    -moz-background-size: 100% auto !important;
+    -o-background-size: 100% auto !important;
+    background-size: 100% auto !important;
+    padding-bottom: 10rem !important;
+    padding-top: 10rem !important;
+}
+
+.widgettitle {
+    text-align: center;
+}
+
+.textwidget, .textwidget h4, .textwidget h5 {
+    font-size: 1rem;
+}
+
+.textwidget p,  #equipos .card-body {
+    font-size: .7rem;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+/*blog*/
+
+.card-img-right, .card-img-left {
+    height: 100%;
+    border-radius: 0 3px 3px 0;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+    .h-md-250 { height: 250px; }
+}
