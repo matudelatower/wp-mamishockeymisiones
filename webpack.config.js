@@ -7,7 +7,7 @@ module.exports = function(env) {
         output: {
             path: path.resolve(__dirname, "dist"),
             filename: "bundle.js",
-            publicPath: './wp-content/themes/mamishockeymisiones/dist/'
+            publicPath: './wp-content/themes/wp-mamishockeymisiones/dist/'
         },
         module: {
             loaders: [
