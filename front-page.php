@@ -179,50 +179,42 @@
                     <div class="tab-content" id="tabTorneosContent">
                         <div class="tab-pane fade show active" id="fixture" role="tabpanel"
                              aria-labelledby="fixture-tab">
-							<?php echo do_shortcode( get_theme_mod( 'seccion_torneos_fixture' ) ); ?>
+
+							<?php if ( is_active_sidebar( 'mamishockeymisiones-fixture' ) ) : ?>
+
+								<?php dynamic_sidebar( 'mamishockeymisiones-fixture' ); ?>
+
+							<?php endif; ?>
+
                         </div>
                         <div class="tab-pane fade" id="tabla" role="tabpanel" aria-labelledby="tabla-tab">
+	                        <?php if ( is_active_sidebar( 'mamishockeymisiones-tabla-posiciones' ) ) : ?>
 
-                            <ul class="nav nav-pills mb-3 mt-1" id="pills-tab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" id="pills-zona-a-tab" data-toggle="pill"
-                                       href="#pills-zona-a"
-                                       role="tab" aria-controls="pills-zona-a" aria-selected="true">Zona A</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="pills-zona-b-tab" data-toggle="pill" href="#pills-zona-b"
-                                       role="tab" aria-controls="pills-zona-b" aria-selected="false">Zona B</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="pills-zona-c-tab" data-toggle="pill" href="#pills-zona-c"
-                                       role="tab" aria-controls="pills-zona-c" aria-selected="false">Zona C</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="pills-zona-a" role="tabpanel"
-                                     aria-labelledby="pills-zona-a-tab">
-									<?php echo do_shortcode( get_theme_mod( 'seccion_torneos_tabla_posiciones_a' ) ); ?>
-                                </div>
-                                <div class="tab-pane fade" id="pills-zona-b" role="tabpanel"
-                                     aria-labelledby="pills-zona-b-tab">
-									<?php echo do_shortcode( get_theme_mod( 'seccion_torneos_tabla_posiciones_b' ) ); ?>
-                                </div>
-                                <div class="tab-pane fade" id="pills-zona-c" role="tabpanel"
-                                     aria-labelledby="pills-zona-c-tab">
-									<?php echo do_shortcode( get_theme_mod( 'seccion_torneos_tabla_posiciones_c' ) ); ?>
-                                </div>
-                            </div>
+		                        <?php dynamic_sidebar( 'mamishockeymisiones-tabla-posiciones' ); ?>
 
+	                        <?php endif; ?>
 
                         </div>
                         <div class="tab-pane fade" id="goleadoras" role="tabpanel" aria-labelledby="goleadoras-tab">
-							<?php echo do_shortcode( get_theme_mod( 'seccion_torneos_goleadoras' ) ); ?>
+	                        <?php if ( is_active_sidebar( 'mamishockeymisiones-goleadoras' ) ) : ?>
+
+		                        <?php dynamic_sidebar( 'mamishockeymisiones-goleadoras' ); ?>
+
+	                        <?php endif; ?>
                         </div>
                         <div class="tab-pane fade" id="tarjetas" role="tabpanel" aria-labelledby="tarjetas-tab">
-							<?php echo do_shortcode( get_theme_mod( 'seccion_torneos_tarjetas' ) ); ?>
+	                        <?php if ( is_active_sidebar( 'mamishockeymisiones-tarjetas' ) ) : ?>
+
+		                        <?php dynamic_sidebar( 'mamishockeymisiones-tarjetas' ); ?>
+
+	                        <?php endif; ?>
                         </div>
                         <div class="tab-pane fade" id="archivos" role="tabpanel" aria-labelledby="archivos-tab">
-							<?php echo do_shortcode( get_theme_mod( 'seccion_torneos_archivos' ) ); ?>
+	                        <?php if ( is_active_sidebar( 'mamishockeymisiones-archivos' ) ) : ?>
+
+		                        <?php dynamic_sidebar( 'mamishockeymisiones-archivos' ); ?>
+
+	                        <?php endif; ?>
                         </div>
                     </div>
                 </div>

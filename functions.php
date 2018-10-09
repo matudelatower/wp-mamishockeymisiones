@@ -130,41 +130,34 @@ register_sidebar( array(
 ) );
 
 
-function mamishockeymisiones_fixture_widget( $content ) {
-	if ( is_singular( array( 'post', 'page' ) ) && is_active_sidebar( 'before-post' ) && is_main_query() ) {
-		dynamic_sidebar( 'mamishockeymisiones-fixture' );
-	}
+$aTorneosWidget = [
+	'fixture'       => 'Fixture',
+	'tabla-posiciones' => 'Tabla de Posiciones',
+	'goleadoras'    => 'Goleadoras',
+	'tarjetas'   => 'Tarjetas',
+	'archivos'      => 'Archivos',
+];
 
-	return $content;
+foreach ( $aTorneosWidget as $key => $item ) {
+
+
+	add_filter( 'the_content',
+		function ( $content ) use ( $key ) {
+			if ( is_singular( array( 'post', 'page' ) ) && is_active_sidebar( 'before-post' ) && is_main_query() ) {
+				dynamic_sidebar( 'mamishockeymisiones-' . $key );
+			}
+
+			return $content;
+		} );
+
+	register_sidebar( array(
+		'id'            => 'mamishockeymisiones-' . $key,
+		'name'          => $item,
+		'description'   => 'Widgets ' . $item,
+		'before_widget' => '<div class="col-md-12">',
+		'after_widget'  => '</div>',
+	) );
 }
-
-add_filter( 'the_content', 'mamishockeymisiones_fixture_widget' );
-
-register_sidebar( array(
-	'id'            => 'mamishockeymisiones-fixture',
-	'name'          => 'Fixture',
-	'description'   => 'Widgets Fixture',
-	'before_widget' => '<div class="card"><div class="card-body">',
-	'after_widget'  => '</div></div>',
-) );
-
-function mamishockeymisiones_tabla_posiciones_widget( $content ) {
-	if ( is_singular( array( 'post', 'page' ) ) && is_active_sidebar( 'before-post' ) && is_main_query() ) {
-		dynamic_sidebar( 'mamishockeymisiones-tabla-posiciones' );
-	}
-
-	return $content;
-}
-
-add_filter( 'the_content', 'mamishockeymisiones_tabla_posiciones_widget' );
-
-register_sidebar( array(
-	'id'            => 'mamishockeymisiones-tabla-posiciones',
-	'name'          => 'Tabla de Posiciones',
-	'description'   => 'Widgets Tabla de Posiciones',
-	'before_widget' => '<div class="card"><div class="card-body">',
-	'after_widget'  => '</div></div>',
-) );
 
 
 //Institucion
