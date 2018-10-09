@@ -15,87 +15,103 @@
                 </div>
             </div>
     </main>
-    <div class="barra">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xs-12 col-md-3 text-center">
-                    <h3>Partidos Futuros</h3>
-                </div>
-                <div class="d-none d-sm-block col-md-9 text-center">
-                    <h3>Últimas noticias</h3>
+
+    <section>
+
+        <div class="barra d-none d-xl-block">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xs-12 col-md-3 text-center">
+                        <h3>Partidos Futuros</h3>
+                    </div>
+                    <div class="col-md-9 text-center">
+                        <h3>Últimas noticias</h3>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <section id="noticias">
+
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-md-3">
-
-					<?php if ( is_active_sidebar( 'mamishockeymisiones-partidos-futuros' ) ) : ?>
-
-						<?php dynamic_sidebar( 'mamishockeymisiones-partidos-futuros' ); ?>
-
-
-					<?php endif; ?>
-                </div>
-                <div class="col-xs-12 col-md-9">
-                    <div class="container">
-                        <div class="d-block d-sm-none col-xs-12 text-center">
-                            <h3>Últimas noticias</h3>
+                <div class="col-md-3">
+                    <div class="barra row d-xs-block d-lg-block d-md-block d-sm-block d-xl-none">
+                        <div class="col-12">
+                            <div class="text-center">
+                                <h3>Partidos Futuros</h3>
+                            </div>
                         </div>
-                        <div class="row">
+                    </div>
+                    <div class="row">
+						<?php if ( is_active_sidebar( 'mamishockeymisiones-partidos-futuros' ) ) : ?>
 
+							<?php dynamic_sidebar( 'mamishockeymisiones-partidos-futuros' ); ?>
+
+
+						<?php endif; ?>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="barra ultimas-noticias row d-xs-block d-lg-block d-md-block d-sm-block d-xl-none">
+                        <div class="col-12">
+                            <div class="text-center">
+                                <h3>Últimas noticias</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
                             <div id="carouselNovedadesControls" class="carousel slide" data-ride="carousel">
                                 <div class="row">
+                                <div class="col-md-12">
                                     <div class="carousel-inner">
 
-										<?php
-										$category_id = get_cat_ID( 'Novedades' );
+		                                <?php
+		                                $category_id = get_cat_ID( 'Novedades' );
 
-										// Get the URL of this category
-										$category_link = get_category_link( $category_id );
+		                                // Get the URL of this category
+		                                $category_link = get_category_link( $category_id );
 
-										$args         = array( 'numberposts' => '6', 'category' => $category_id );
-										$recent_posts = wp_get_recent_posts( $args );
+		                                $args         = array( 'numberposts' => '6', 'category' => $category_id );
+		                                $recent_posts = wp_get_recent_posts( $args );
 
 
-										foreach ( $recent_posts as $recent ) {
-											if ( $countNovedades == 0 ) {
-												print '<div class="carousel-item active"><div class="row card-group">';
-												$countNovedades = 1;
-											} elseif ( $countNovedades == 1 ) {
-												print '<div class="carousel-item"><div class="row card-group">';
-											}
+		                                foreach ( $recent_posts as $recent ) {
+			                                if ( $countNovedades == 0 ) {
+				                                print '<div class="carousel-item active"><div class="row card-group">';
+				                                $countNovedades = 1;
+			                                } elseif ( $countNovedades == 1 ) {
+				                                print '<div class="carousel-item"><div class="row card-group">';
+			                                }
 
-											?>
+			                                ?>
 
                                             <div class="col-xs-12 col-md-4">
                                                 <div class="card">
 
-													<?php
-													if ( has_post_thumbnail( $recent["ID"] ) ) {
-														?>
+					                                <?php
+					                                if ( has_post_thumbnail( $recent["ID"] ) ) {
+						                                ?>
 
                                                         <img class="card-img-top"
-                                                             src="<?php echo get_the_post_thumbnail_url( $recent["ID"] ); ?>" alt="Card image cap">
+                                                             src="<?php echo get_the_post_thumbnail_url( $recent["ID"] ); ?>"
+                                                             alt="Card image cap">
 
-														<?php
-													} else {
-														?>
+						                                <?php
+					                                } else {
+						                                ?>
                                                         <img class="card-img-top"
                                                              src="<?php echo get_stylesheet_directory_uri(); ?>/images/placeholder.png"
                                                              alt="Card image cap">
 
-														<?php
-													}
-													?>
+						                                <?php
+					                                }
+					                                ?>
                                                     <div class="card-body">
                                                         <h5 class="card-title"><?php echo $recent["post_title"]; ?></h5>
                                                         <p class="card-text">
                                                             <small class="text-muted">
                                                                 <time><?php echo date( get_option( 'date_format' ),
-																		strtotime( $recent['post_date'] ) ); ?></time>
+										                                strtotime( $recent['post_date'] ) ); ?></time>
                                                             </small>
                                                         </p>
                                                         <a href="<?php echo get_permalink( $recent["ID"] ); ?>"
@@ -104,17 +120,17 @@
                                                 </div>
                                             </div>
 
-											<?php
-											if ( $countNovedades % 3 == 0 ) {
-												print '</div></div>';
-												$countNovedades = 1;
-											} else {
+			                                <?php
+			                                if ( $countNovedades % 3 == 0 ) {
+				                                print '</div></div>';
+				                                $countNovedades = 1;
+			                                } else {
 
-												$countNovedades ++;
-											}
-										}
-										wp_reset_query();
-										?>
+				                                $countNovedades ++;
+			                                }
+		                                }
+		                                wp_reset_query();
+		                                ?>
 
                                     </div>
                                     <div class="container">
@@ -134,12 +150,15 @@
                                         </div>
                                     </div>
                                 </div>
+                                </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
     </section>
+
 
     <div class="barra">
         <div class="container">
@@ -188,33 +207,33 @@
 
                         </div>
                         <div class="tab-pane fade" id="tabla" role="tabpanel" aria-labelledby="tabla-tab">
-	                        <?php if ( is_active_sidebar( 'mamishockeymisiones-tabla-posiciones' ) ) : ?>
+							<?php if ( is_active_sidebar( 'mamishockeymisiones-tabla-posiciones' ) ) : ?>
 
-		                        <?php dynamic_sidebar( 'mamishockeymisiones-tabla-posiciones' ); ?>
+								<?php dynamic_sidebar( 'mamishockeymisiones-tabla-posiciones' ); ?>
 
-	                        <?php endif; ?>
+							<?php endif; ?>
 
                         </div>
                         <div class="tab-pane fade" id="goleadoras" role="tabpanel" aria-labelledby="goleadoras-tab">
-	                        <?php if ( is_active_sidebar( 'mamishockeymisiones-goleadoras' ) ) : ?>
+							<?php if ( is_active_sidebar( 'mamishockeymisiones-goleadoras' ) ) : ?>
 
-		                        <?php dynamic_sidebar( 'mamishockeymisiones-goleadoras' ); ?>
+								<?php dynamic_sidebar( 'mamishockeymisiones-goleadoras' ); ?>
 
-	                        <?php endif; ?>
+							<?php endif; ?>
                         </div>
                         <div class="tab-pane fade" id="tarjetas" role="tabpanel" aria-labelledby="tarjetas-tab">
-	                        <?php if ( is_active_sidebar( 'mamishockeymisiones-tarjetas' ) ) : ?>
+							<?php if ( is_active_sidebar( 'mamishockeymisiones-tarjetas' ) ) : ?>
 
-		                        <?php dynamic_sidebar( 'mamishockeymisiones-tarjetas' ); ?>
+								<?php dynamic_sidebar( 'mamishockeymisiones-tarjetas' ); ?>
 
-	                        <?php endif; ?>
+							<?php endif; ?>
                         </div>
                         <div class="tab-pane fade" id="archivos" role="tabpanel" aria-labelledby="archivos-tab">
-	                        <?php if ( is_active_sidebar( 'mamishockeymisiones-archivos' ) ) : ?>
+							<?php if ( is_active_sidebar( 'mamishockeymisiones-archivos' ) ) : ?>
 
-		                        <?php dynamic_sidebar( 'mamishockeymisiones-archivos' ); ?>
+								<?php dynamic_sidebar( 'mamishockeymisiones-archivos' ); ?>
 
-	                        <?php endif; ?>
+							<?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -446,7 +465,7 @@ if ( ! $seccion_equipos_imagen_fondo ) {
     </div>
 
     <section id="equipos">
-        <div class="container mt-1">
+        <div class="container">
             <div id="carouselEquiposControls" class="carousel slide" data-ride="carousel">
                 <div class="row">
                     <div class="carousel-inner">
@@ -830,7 +849,7 @@ if ( ! $seccion_contacto_imagen_fondo ) {
 
                     <div class="row">
                         <div class="col-md-12">
-	                        <?php echo do_shortcode( get_theme_mod( 'seccion_contacto_formulario' ) ); ?>
+							<?php echo do_shortcode( get_theme_mod( 'seccion_contacto_formulario' ) ); ?>
                         </div>
                     </div>
                 </div>

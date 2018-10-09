@@ -27,7 +27,12 @@ Version: 1.0.0
 }
 
 section {
-    margin-bottom: 1rem;
+    /*margin-bottom: 1rem;*/
+}
+
+section > .container{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 #galeria{
@@ -65,6 +70,24 @@ section {
 
 .pointer {
     cursor: pointer;
+}
+
+/*front page novedades*/
+@media (max-width: 768px) {
+    #carouselNovedadesControls{
+        margin-top: 2rem;
+    }
+
+    .ultimas-noticias{
+        height: 6.7rem;
+    }
+}
+
+/*front page equipos*/
+
+#carouselEquiposControls .carousel-inner{
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 /*blog*/
