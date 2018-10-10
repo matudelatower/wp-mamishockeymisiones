@@ -159,8 +159,8 @@
         </div>
     </section>
 
-
-    <div class="barra">
+    <div class="barra pointer" data-toggle="collapse" href="#collapseTorneos" role="button" aria-expanded="false"
+         aria-controls="collapseTorneos">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-12 text-center">
@@ -170,7 +170,7 @@
         </div>
     </div>
     <section id="torneos">
-        <div class="container">
+        <div class="container collapse" id="collapseTorneos">
             <div class="row">
                 <div class="col-12 mt-1">
                     <ul class="nav nav-tabs nav-fill" id="tabTorneos" role="tablist">
@@ -454,7 +454,8 @@ if ( ! $seccion_equipos_imagen_fondo ) {
 
         </div>
     </div>
-    <div class="barra">
+    <div class="barra pointer" data-toggle="collapse" href="#collapseEquipos" role="button" aria-expanded="false"
+         aria-controls="collapseEquipos">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-12 text-center">
@@ -465,7 +466,7 @@ if ( ! $seccion_equipos_imagen_fondo ) {
     </div>
 
     <section id="equipos">
-        <div class="container">
+        <div class="container collapse" id="collapseEquipos">
             <div id="carouselEquiposControls" class="carousel slide" data-ride="carousel">
                 <div class="row">
                     <div class="carousel-inner">
@@ -614,7 +615,8 @@ if ( ! $seccion_socias_imagen_fondo ) {
             <!--            <img src="#" class="img-fluid" alt="socias">-->
         </div>
     </div>
-    <div class="barra">
+    <div class="barra pointer" data-toggle="collapse" href="#collapseSocias" role="button" aria-expanded="false"
+         aria-controls="collapseSocias">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-12 text-center">
@@ -625,7 +627,7 @@ if ( ! $seccion_socias_imagen_fondo ) {
     </div>
 
     <section id="socias">
-        <div class="container">
+        <div class="container collapse" id="collapseSocias">
             <div class="row">
                 <div class="col-12">
                     <div class="table-responsive">
@@ -653,7 +655,8 @@ if ( ! $seccion_galeria_imagen_fondo ) {
             <!--            <img src="#" class="img-fluid" alt="galeria">-->
         </div>
     </div>
-    <div class="barra">
+    <div class="barra pointer" data-toggle="collapse" href="#collapseGaleria" role="button" aria-expanded="false"
+         aria-controls="collapseGaleria">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-12 text-center">
@@ -664,7 +667,7 @@ if ( ! $seccion_galeria_imagen_fondo ) {
     </div>
 
     <section id="galeria">
-        <div class="container">
+        <div class="container collapse" id="collapseGaleria">
             <div id="carouselGaleriasControls" class="carousel slide" data-ride="carousel">
                 <div class="row">
                     <div class="carousel-inner">
@@ -824,7 +827,8 @@ if ( ! $seccion_contacto_imagen_fondo ) {
             <!--            <img src="#" class="img-fluid" alt="contacto">-->
         </div>
     </div>
-    <div class="barra">
+    <div class="barra pointer" data-toggle="collapse" href="#collapseContacto" role="button" aria-expanded="false"
+         aria-controls="collapseContacto">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-12 text-center">
@@ -835,7 +839,7 @@ if ( ! $seccion_contacto_imagen_fondo ) {
     </div>
 
     <section id="contacto">
-        <div class="container">
+        <div class="container collapse" id="collapseContacto">
             <div class="row mt-2">
                 <div class="col-md-6">
                     <p class="text-justify">
