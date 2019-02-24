@@ -228,10 +228,8 @@ register_sidebar( array(
 	'id'            => 'mamishockeymisiones-reglamentos',
 	'name'          => 'Reglamentos',
 	'description'   => 'Widgets Reglamentos',
-	'before_widget' => '<div class="col-md-4"><div class="card">',
-	'before_title'  => '<div class="card-header">',
-	'after_title'   => '</div><div class="card-body">',
-	'after_widget'  => '</div></div></div>',
+	'before_widget' => '<div class="col-md-12">',
+	'after_widget'  => '</div>',
 ) );
 
 function mamishockeymisiones_tribunal_widget( $content ) {
