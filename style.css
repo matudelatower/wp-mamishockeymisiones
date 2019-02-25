@@ -68,6 +68,26 @@ section > .container{
     font-size: .7rem;
 }
 
+/*card cabecera*/
+
+#carouselNovedadesControls .card-cabecera{
+    position: relative;
+    width: auto;
+    height: 9rem;
+    overflow: hidden;
+}
+
+#carouselNovedadesControls .card-body{
+    min-height: 178px;
+}
+
+#carouselGaleriasControls .card-body-img{
+    position: relative;
+    width: auto;
+    height: 13rem;
+    overflow: hidden;
+}
+
 .pointer {
     cursor: pointer;
 }

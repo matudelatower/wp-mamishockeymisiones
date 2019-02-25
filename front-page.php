@@ -87,6 +87,7 @@
 
                                             <div class="col-xs-12 col-md-4">
                                                 <div class="card">
+                                                    <div class="card-cabecera">
 
 					                                <?php
 					                                if ( has_post_thumbnail( $recent["ID"] ) ) {
@@ -106,6 +107,7 @@
 						                                <?php
 					                                }
 					                                ?>
+                                                    </div>
                                                     <div class="card-body">
                                                         <h5 class="card-title"><?php echo $recent["post_title"]; ?></h5>
                                                         <p class="card-text">
@@ -713,23 +715,24 @@ if ( ! $seccion_galeria_imagen_fondo ) {
                                                     <small class="text-muted"><?php echo $recent["post_title"]; ?></small>
                                                 </p>
                                             </div>
+                                            <div class="card-body-img">
+				                                <?php
+				                                if ( has_post_thumbnail( $recent["ID"] ) ) {
+					                                ?>
+                                                    <img src="<?php echo get_the_post_thumbnail_url( $recent["ID"],
+						                                'thumbnail' ); ?>" alt="" class="card-img-bottom">
+					                                <?php
+				                                } else {
+					                                ?>
 
-											<?php
-											if ( has_post_thumbnail( $recent["ID"] ) ) {
-												?>
-                                                <img src="<?php echo get_the_post_thumbnail_url( $recent["ID"],
-													'thumbnail' ); ?>" alt="" class="card-img-bottom">
-												<?php
-											} else {
-												?>
-
-                                                <img class="card-img-bottom"
-                                                     src="<?php echo get_template_directory_uri() . '/images/equipo-generico.png' ?>">
+                                                    <img class="card-img-bottom"
+                                                         src="<?php echo get_template_directory_uri() . '/images/equipo-generico.png' ?>">
 
 
-												<?php
-											}
-											?>
+					                                <?php
+				                                }
+				                                ?>
+                                            </div>
                                         </a>
                                     </div>
 
